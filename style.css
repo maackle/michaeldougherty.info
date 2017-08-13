@@ -42,7 +42,19 @@ img {
 
 .separator {
   display: inline-block;
-  margin: auto 8px;
+  opacity: 0.5;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 432px) {
+  .contact .separator {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
