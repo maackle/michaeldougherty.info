@@ -1,0 +1,16 @@
+{
+  "name": "michaeldougherty.info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "harp server & browser-sync start --proxy 'localhost:9000' --files '**/*.jade, **/*.sass'",
+    "build": "harp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "harp": "^0.25.0"
+  }
+}
