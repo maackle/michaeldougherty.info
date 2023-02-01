@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "harp server & browser-sync start --proxy 'localhost:9000' --files '**/*.jade, **/*.sass'",
-    "deploy": "harp compile . && ./deploy.sh"
+    "build": "harp src build",
+    "start": "harp src"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.23.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "harp": "^0.46.1",
+    "less": "^4.1.3"
+  }
 }
