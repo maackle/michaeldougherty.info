@@ -1,14 +1,22 @@
+
+
 ## installation
 
-Make sure harp is installed globally
+Get yarn.
 
 ```
-yarn global add harp
+yarn install
 ```
 
 ## development
 
 ```
 yarn start
+```
+
+## build
+
+```
+yarn build
 ```
 
