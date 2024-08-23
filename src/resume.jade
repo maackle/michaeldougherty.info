@@ -1,0 +1,176 @@
+extends layout/resume-base
+
+mixin client-main(name, location, roles, techs)
+	li.client.client-main
+		.meta
+			ul
+				for role in roles
+					li.role= role
+			ul
+				for tech in techs
+					li.tech= tech
+		if location
+			.location= location
+		.name!= name
+		.description
+			block
+
+mixin client-sub(name, years)
+	.client.client-sub
+		.name= name
+		.description
+			block
+
+block head
+
+block styles
+	link(rel="stylesheet", href="css/resume.css")
+
+block body
+		//- .container
+		.resume-nav
+			a(href="/") &larr; back to site
+			| (use print dialog for PDF version)
+		.resume-container
+			.tippy-top
+				.title
+					h1.michael Michael Dougherty
+					h2.subheader
+						| Software Engineer
+						.light &mdash; Portland, OR
+						br
+						a.light.small(href="mailto:michael.douglas.dougherty@gmail.com?subject=resume") michael.douglas.dougherty@gmail.com
+				//- .contact
+				//- 	p: a.normal(href="http://michaeldougherty.info") http://michaeldougherty.info
+				//- 	p: a.normal(href="mailto:michael.douglas.dougherty@gmail.com?subject=resume") michael.douglas.dougherty@gmail.com
+				//- 	p: a.normal(href="tel:+17329916167")  1-732-991-6167
+
+				p.blurb Independent contractor providing efficient, correct software solutions to complex problems which minimize harm and maximize good.
+
+			ul.list.employment-list
+				h2.heading-primary Employment Experience
+
+				//- li
+				//- 	.meta
+				//- 		p System Engineer / Designer
+				//- 		p 2018 - present
+				//- 		ul
+				//- 			li.tech Rust
+				//- 	.location Remote
+				//- 	.name Holochain
+				//- 	.description
+				//- 		p TODO
+				li
+					.meta
+						p Software Lead
+						p 2017 - 2018
+						ul
+							li.tech Python
+							li.tech React
+							li.tech Microcontrollers
+					.location Portland, OR
+					.name PLANT Group
+					.description
+						p Wrote software for ESP8266 microcontrollers used to control smart irrigation systems and monitor soil conditions
+						p Built a client-facing web app to manage and report on said microcontrollers
+				li
+					.meta
+						p Senior Software Engineer
+						p 2016 - 2017
+						ul
+							li.tech ReactJS
+							li.tech Django
+							li.tech Docker
+					.location Portland, OR
+					.name CrowdStreet, Inc.
+					.description
+						p Maintained and built features for a large existing Django web app
+						p Did a greenfield rewrite of large swaths of the front end in React; built a custom data table framework
+						p Owned and maintained a multi-instance Docker-based devops setup
+				li
+					.meta
+						p Software Engineer
+						p 2014 - 2015
+						ul
+							li.tech Python
+							li.tech Django
+							li.tech AngularJS
+							li.tech Elasticsearch
+					.location Portland, OR
+					.name Building Energy, Inc.
+					.description
+						p Implemented a management system which the city of San Francisco currently uses to manage its building energy benchmarking requirements.
+						p Put BE "on the map" &ndash; made their app geospatially aware with a searchable map of buildings and a custom geocoding service.
+				li
+					.meta
+						p Consultant
+						p 2010 - 2014
+						ul
+							li.tech Python
+							li.tech PHP
+							li.tech HTML/CSS
+					.location Portland, OR
+					.name Web Development Consultant
+					.description
+						p Doing literally everything, often as a one-man team. Front end, back end, devops, and some design. See below for details on recent clients.
+				li
+					.meta
+						p Research Assistant
+						p 2005 - 2009
+						ul
+							li.tech C++
+							li.tech MATLAB
+					.location State College, PA
+					.name Pennsylvania State University
+					.description
+						p Designed and coded simulations of crowd behavior in C++.
+						p Used data mining and neural networks to predict strength and reliability of materials based on microphotographic cross-sections
+						p Sole programmer on these and several other projects
+
+
+			ul.list.education-list
+				h2.heading-primary Education
+				li
+					.meta: p 2007 - 2009
+					.location Penn State University
+					.name M.S. Computer Science
+					.description
+						p Completed entire program <em>except for thesis</em>
+				li
+					.meta: p 2002 - 2006
+					.location Penn State University
+					.name B.S. Electrical Engineering
+
+			ul.list.client-list
+				h2.heading-primary Past Clients
+
+				h3.heading-secondary 2017
+				+client-main("University of North Carolina", "Chapen Hill, NC", roles=['Lead Developer'], techs=['Python', 'Elm'])
+					p Developed a web app for collecting data from a wide audience of participants [<a href="http://www.sensingsettlements.org">http://www.sensingsettlements.org</a>]
+
+				h3.heading-secondary 2014
+				//- +client-main("Sterling Lentz Design & Development", "Portland, OR", roles=['Lead Developer'], techs=['Python', 'Node.js', 'Rails'])
+				//- 	p Worked as the Development arm of a small design studio to bring forth various cutting-edge websites.
+				+client-main("SalterMitchell", "Washington, D.C.", roles=['Lead Developer', 'Developer'], techs=['Python', 'Flask', 'Jade'])
+					p Single-handedly developed a site for a genetics research startup which interfaces with a complex API. Worked tightly with a small team of in-house designers and developers as a remote contractor across the country.
+
+				h3.heading-secondary 2013
+				+client-main("University of North Carolina", "Chapel Hill, NC", roles=['Lead Designer', 'Lead Developer'], techs=['Python', 'Django', 'Sass', 'PostgreSQL'])
+					p Worked closely with a UNC research team to design and develop an open-source web application for visualizing and interacting with geospatial data. Designed a public-facing site to showcase this application. Also designed a highly customized website to showcase a professor's research projects. <br/> [<a href="http://www.makingroomformanufacturing.org">http://www.makingroomformanufacturing.org</a>]
+				+client-main("partlyhuman / This Is Pop / NBC&nbsp;Universal", "New York, NY", roles=['Developer'], techs=['PHP', 'Laravel'])
+					p Worked with one other developer and a game design team to create a new online HTML5 game for NBC Universal's Character Arcade. Designed the entire backend to the game, working closely with the NBC team to connect their API to the game's frontend. Helped the NBC team white-label the game so as to produce other versions with different game assets and branding.
+				+client-main("Grove", "Portland, OR", roles=['Developer'], techs=['CoffeeScript', 'HTML5 Canvas'])
+					p Collaborated with the Lead Developer to create a feature-rich HTML5 tool for iPhone case customization. Also did maintenance and implemented various new features on their highy-customized Django-powered eCommerce site.
+			//- ul.client-list
+			//- 	+client-sub("Jivaldi", [2012])
+			//- 	+client-sub("WebBrand Agency", [2012, 2013])
+			//- 		| Lead Developer
+			//- 	+client-sub("SalterMitchell", [2014])
+			//- 		| Lead Developer
+			//- 	+client-sub("Talik Creative Agency", [2010, 2011])
+			//- 		| 20+ websites
+
+			//- h2.heading-primary other
+
+			//- | Technical Development Editor - Sass In Depth by Manning Publications
+
