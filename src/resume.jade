@@ -45,30 +45,31 @@ block body
 				//- 	p: a.normal(href="mailto:michael.douglas.dougherty@gmail.com?subject=resume") michael.douglas.dougherty@gmail.com
 				//- 	p: a.normal(href="tel:+17329916167")  1-732-991-6167
 
-				p.blurb Independent contractor providing efficient, correct software solutions to complex problems which minimize harm and maximize good.
+				p.blurb Research-minded software engineer with a focus on peer-to-peer protocols, decentralization, and formal verification.
 
 			ul.list.employment-list
-				h2.heading-primary Employment Experience
+				h2.heading-primary Engineering Experience
 
 				li
 					.meta
-						p Systems Engineer
+						p: strong Software Engineer / Architect
 						p 2018 - 2024
 						ul
 							li.tech Rust
-							li.tech Wasm
 							li.tech p2p
+							li.tech dweb/web3
 							li.tech cryptography
 							li.tech formal verification
 					.location Remote / Worldwide
 					.name Holochain Foundation
 					.description
-						p I was one of the main designers and developers for a complete from-scratch rewrite of the Holochain runtime in 2020, which is still being actively developed and used.
+						p I was one of the main designers and developers for a complete from-scratch rewrite of Holochain in 2020, which is still being actively developed and used.
 						p Co-designed and developed a novel algorithm for long-term syncing of data between peers in a distributed network. I am a co-author on the patent.
-						p Employed formal verification techniques to help uncover subtle bugs and oversights.
+						p Took sole responsibility for several key aspects of the system and collaborated with the founders and colleagues regularly to shape the product's direction.
+						p Advocated for and used formal verification techniques to help uncover subtle bugs.
 				li
 					.meta
-						p Software Lead
+						p: strong Software Lead
 						p 2017 - 2018
 						ul
 							li.tech Python
@@ -77,51 +78,59 @@ block body
 					.location Portland, OR
 					.name PLANT Group
 					.description
-						p Wrote software for ESP8266 microcontrollers used to control smart irrigation systems and monitor soil conditions
-						p Built a client-facing web app to manage and report on said microcontrollers
+						p Wrote software for ESP8266 microcontrollers used to control smart irrigation systems and monitor soil conditions, and built a web app for monitoring said controllers.
 				li
 					.meta
-						p Senior Software Engineer
+						p: strong Senior Software Engineer
 						p 2016 - 2017
 						ul
-							li.tech ReactJS
+							li.tech React
 							li.tech Django
-							li.tech Docker
+							//- li.tech Docker
 					.location Portland, OR
 					.name CrowdStreet, Inc.
 					.description
-						p Maintained and built features for a large existing Django web app
-						p Did a greenfield rewrite of large swaths of the front end in React; built a custom data table framework
-						p Owned and maintained a multi-instance Docker-based devops setup
+						p Maintained and built features for the main product, a large Django web app.
+						//- p Did a greenfield rewrite in React of large swaths of the front end.
+						p Owned and maintained a multi-instance Docker-based DevOps setup.
 				li
 					.meta
-						p Software Engineer
+						p: strong Software Engineer
 						p 2014 - 2015
 						ul
 							li.tech Python
 							li.tech Django
-							li.tech AngularJS
+							//- li.tech Angular
 							li.tech Elasticsearch
 					.location Portland, OR
 					.name Building Energy, Inc.
 					.description
-						p Implemented a management system which the city of San Francisco currently uses to manage its building energy benchmarking requirements.
-						p Put BE "on the map" &ndash; made their app geospatially aware with a searchable map of buildings and a custom geocoding service.
+						p Implemented a management system which San Francisco used for some time to manage its building energy benchmarking requirements.
+						p Added a highly-searchable map with many entities, powered by Elasticsearch.
 				li
 					.meta
-						p Consultant
+						p: strong Self-employed
 						p 2010 - 2014
 						ul
 							li.tech Python
+							li.tech Elm
+							li.tech Node.js
+							li.tech PostgreSQL
 							li.tech PHP
-							li.tech HTML/CSS
+							li.tech HTML+CSS
+							li.tech Sass
 					.location Portland, OR
-					.name Web Development Consultant
+					.name Michael Dougherty / Level Eleven
 					.description
-						p Doing literally everything, often as a one-man team. Front end, back end, devops, and some design. See below for details on recent clients.
+						p I ran a full-stack web consulting business. Front-end, back-end, DevOps, and design.
+						p Worked closely with a UNC professor and his research team to design and develop a web application for visualizing and interacting with their geospatial research data on urban deindustrialization.
+						p Single-handedly built an app for a genetics research startup.
+						p Worked as part of a game development team for NBC Universal.
+
+
 				li
 					.meta
-						p Research Assistant
+						p: strong Research Assistant
 						p 2005 - 2009
 						ul
 							li.tech C++
@@ -129,9 +138,14 @@ block body
 					.location State College, PA
 					.name Pennsylvania State University
 					.description
-						p Designed and coded simulations of crowd behavior in C++.
-						p Used data mining and neural networks to predict strength and reliability of materials based on microphotographic cross-sections
-						p Sole programmer on these and several other projects
+						p Designed mathematical models of crowd behavior and programmed simulations in C++ as part of a multi-disciplinary research team.
+						p Used data mining and neural networks to predict strength and reliability of materials based on microphotographic cross-sections.
+
+
+
+
+
+
 
 
 			ul.list.education-list
@@ -147,26 +161,83 @@ block body
 					.location Penn State University
 					.name B.S. Electrical Engineering
 
-			ul.list.client-list
-				h2.heading-primary Past Clients
 
-				h3.heading-secondary 2017
-				+client-main("University of North Carolina", "Chapen Hill, NC", roles=['Lead Developer'], techs=['Python', 'Elm'])
-					p Developed a web app for crowdsourcing classification of aerial imagery named Sensing Settlements.
 
-				h3.heading-secondary 2014
-				//- +client-main("Sterling Lentz Design & Development", "Portland, OR", roles=['Lead Developer'], techs=['Python', 'Node.js', 'Rails'])
-				//- 	p Worked as the Development arm of a small design studio to bring forth various cutting-edge websites.
-				+client-main("SalterMitchell", "Washington, D.C.", roles=['Lead Developer', 'Developer'], techs=['Python', 'Flask', 'Jade'])
-					p Single-handedly developed a site for a genetics research startup which interfaces with a complex API. Worked tightly with a small team of in-house designers and developers as a remote contractor.
 
-				h3.heading-secondary 2013
-				+client-main("University of North Carolina", "Chapel Hill, NC", roles=['Lead Designer', 'Lead Developer'], techs=['Python', 'Django', 'Sass', 'PostgreSQL'])
-					p Worked closely with a UNC research team to design and develop an open-source web application for visualizing and interacting with geospatial data. Designed a public-facing site to showcase this application. Also designed a highly customized website to showcase a professor's research projects. <br/> [<a href="http://www.makingroomformanufacturing.org">http://www.makingroomformanufacturing.org</a>]
-				+client-main("partlyhuman / This Is Pop / NBC&nbsp;Universal", "New York, NY", roles=['Developer'], techs=['PHP', 'Laravel'])
-					p Worked with one other developer and a game design team to create a new online HTML5 game for NBC Universal's Character Arcade. Designed the entire backend to the game, working closely with the NBC team to connect their API to the game's frontend. Helped the NBC team white-label the game so as to produce other versions with different game assets and branding.
-				+client-main("Grove", "Portland, OR", roles=['Developer'], techs=['CoffeeScript', 'HTML5 Canvas'])
-					p Collaborated with the Lead Developer to create a feature-rich HTML5 tool for iPhone case customization. Also did maintenance and implemented various new features on their highy-customized Django-powered eCommerce site.
+
+
+
+
+			ul.list.employment-list
+				h2.heading-primary Other Experience
+
+				li
+					.meta
+						p: strong Interviewer
+						p 2018
+					.name Karat
+					.description
+						p Held technical interviews with candidates applying to various tech companies. Administered programming challenges, discussed past technical projects, and assessed technical competency.
+				li 
+					.meta 
+						p: strong Mentor
+						p 2018
+					.name Thinkful
+					.description
+						p Mentored several students through the Thinkful web development bootcamp, meeting regularly for tutoring and advice-giving.
+
+				li
+					.meta
+						p: strong Course Creator
+						p 2017
+					.name Global Knowledge
+					.description
+						p I created an in-depth training course called "Top 10 Python Concepts", with dozens of short videos, assignments, and quizzes, to be used in an enterprise training package.
+				li
+					.meta
+						p: strong Editor
+						p 2013
+					.name Manning Publications
+					.description
+						p Served as a technical editor for the unpublished book <em>Sass In Depth</em>.
+				//- li 
+				//- 	.meta 2013
+				//- 	.description Technical Development Editor for Sass In Depth, by Manning Publications (never unpublished)
+
+
+
+
+			//-
+				ul.list.client-list
+					h2.heading-primary Selected consulting work
+
+					//- h3.heading-secondary 2017
+					//- +client-main("University of North Carolina", "Chapel Hill, NC", roles=['Lead Developer'], techs=['Python', 'Elm'])
+					//- 	p Developed a web app for crowdsourcing classification of aerial imagery named Sensing Settlements.
+
+					h3.heading-secondary 2014
+					//- +client-main("Sterling Lentz Design & Development", "Portland, OR", roles=['Lead Developer'], techs=['Python', 'Node.js', 'Rails'])
+					//- 	p Worked as the Development arm of a small design studio to bring forth various cutting-edge websites.
+					+client-main("SalterMitchell", "Washington, D.C.", roles=['Lead Developer', 'Developer'], techs=['Python', 'Flask', 'Jade'])
+						p Single-handedly developed a site for a genetics research startup which interfaces with a complex API. Worked tightly with a small team of in-house designers and developers as a remote contractor.
+
+					h3.heading-secondary 2013
+
+					+client-main("University of North Carolina", "Chapel Hill, NC", roles=['Lead Designer', 'Lead Developer'], techs=['Python', 'Django', 'Sass', 'PostgreSQL'])
+						p Worked closely with a UNC research team to design and develop a web application for visualizing and interacting with their geospatial research data on urban deindustrialization.
+
+					+client-main("partlyhuman / This Is Pop / NBC&nbsp;Universal", "New York, NY", roles=['Developer'], techs=['PHP', 'Laravel'])
+						p Worked with a game design team to create a new online HTML5 game for NBC Universal's Character Arcade. Designed the entire backend to the game, working closely with the NBC team to connect their API to the game's frontend. Helped the NBC team white-label the game so as to produce other versions with different game assets and branding.
+
+					//- +client-main("Grove", "Portland, OR", roles=['Developer'], techs=['CoffeeScript', 'HTML5 Canvas'])
+					//- 	p Collaborated with the Lead Developer to create a feature-rich HTML5 tool for iPhone case customization. Also did maintenance and implemented various new features on their highy-customized Django-powered eCommerce site.
+				
+
+
+
+
+
+
 			//- ul.client-list
 			//- 	+client-sub("Jivaldi", [2012])
 			//- 	+client-sub("WebBrand Agency", [2012, 2013])
@@ -175,8 +246,3 @@ block body
 			//- 		| Lead Developer
 			//- 	+client-sub("Talik Creative Agency", [2010, 2011])
 			//- 		| 20+ websites
-
-			//- h2.heading-primary other
-
-			//- | Technical Development Editor - Sass In Depth by Manning Publications
-

@@ -158,11 +158,6 @@ summary {
   display: block;
 }
 
-/* line 10, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/layout/_sticky-footer.scss */
-html,
-body {
-  height: 100%;
-}
 
 /* line 12, ../../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/layout/_sticky-footer.scss */
 #root {
@@ -192,7 +187,6 @@ body {
   font-size: 16px;
   background: #efefef;
   color: #666;
-  height: 100%;
 }
 
 @media(min-width: 650px) {
@@ -944,7 +938,7 @@ ul {
 .list .meta p {
   text-align: right;
   vertical-align: top;
-  margin-top: 0;
+  margin: 0;
 }
 
 /* line 179, ../../../app/sass/resume.scss */
@@ -982,6 +976,11 @@ ul {
 }
 
 @media print {
+
+  html,
+  body {
+    background: white;
+  }
 
   /* line 206, ../../../app/sass/resume.scss */
   .resume-nav {
