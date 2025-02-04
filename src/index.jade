@@ -5,93 +5,28 @@ html(lang="en")
     link(rel='stylesheet', href='style.css')
     meta(charset='utf-8')
     meta(name="description", content="Michael Dougherty is a programmer-musician in Portland, OR")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(property="og:description", content="Michael Dougherty is a programmer-musician in Portland, OR")
   body
     #root
-      section#intro
-        img.title(src="images/michaeldougherty2.png", alt="Michael Dougherty", title="Michael Dougherty")
-        br
-        img.tagline(src="images/tagline1.png", alt="is a programmer-musician", title="is a programmer-musician")
-        img.tagline(src="images/tagline2.png", alt="in Portland, OR", title="in Portland, OR")
+      section#intro: .container
+        h1 Michael Dougherty
+        
+        div
+          .chunk software engineer &amp; musician
+          .chunk in Portland, OR
+        
         .contact
-          a(href='mailto:michael.douglas.dougherty@gmail.com') email
-          span.separator: img(src="images/bullet-2.png")
-          a(href='http://github.com/maackle') github
-          span.separator: img(src="images/bullet-2.png")
-          a(href='/resume.html') resume
-        .contact
-        br(style='clear: both;')
 
-      .sep.sep2
+          //- | contact
+          //- span.separator :
 
-      section#computers: .container
-        h2: img(src="images/projects.png", alt="Projects")
-
-        br
-
-        h2.underline-2 Holochain
-        p I'm currently working full-time on <a href="https://holochain.org">Holochain</a>, a post-blockchain framework for building distributed p2p apps. Check us out <a href="https://github.com/holochain">on github</a>!
-
-
-        //- h2.underline-2 Professional
-        //- p When I'm not working on these projects, I'm trying to make money in satisfying ways:
-
-        //- h3
-        //-   img.bullet(src="images/bullet-2.png")
-        //-   | Mentoring
-        //- p I am a full-stack web development mentor with <a href="https://thinkful.com">Thinkful</a>. I help students with no prior programming experience acquire the skills necessary to get hired as web developer.
-        //- h3
-        //-   img.bullet(src="images/bullet-2.png")
-        //-   | Technical Interviews
-        //- p I conduct technical interviewers for <a href="https://karat.com">Karat</a>, a company which other companies rely on for technical assessment of their job candidates.
-
-      .sep.sep1
-      section#music: .container
-        a(name='music')
-        h2: img(src="images/music.png", alt="Music")
-        p I've been playing bass guitar for 25 years, about as long as I've been programming.
-        p I'm learning the piano, too.
-
-        h2.underline-2 Bands I'm in
-        p I play in a number of bands, mostly based in Portland.
-        p
-          img.bullet(src="images/bullet.png")
-          a(href="http://maxribnerband.com") Max Ribner Band
-        p
-          img.bullet(src="images/bullet.png")
-          a(href="http://www.popgoji.com/") POPgoji
-        p
-          img.bullet(src="images/bullet.png")
-          a(href="https://www.robinjackson.net/") Robin Jackson &amp; the Caravan
-        p
-          img.bullet(src="images/bullet.png")
-          a(href="https://www.gregjohnsonjazz.com/") Greg Johnson
-        //- p
-        //-   img.bullet(src="images/bullet.png")
-        //-   a(href="http://shvvvr.com/") Shvvvr
-
-        h2.underline-2 Discography
-
-        p I'm on a few albums. Here are a few on Spotify:
-        p
-          img.bullet(src="images/bullet-2.png")
-          a(href="https://open.spotify.com/album/5uwXAaPAmFjOt4j8JrbTF7?si=if7lQAiYTQm3TVHH5fRetA") Megalodon, <i>Edible</i>, 2010
-        p
-          img.bullet(src="images/bullet-2.png")
-          a(href="https://open.spotify.com/album/4if9mPjMVO1FwEixxy2gF0?si=TqZzmm2uQXetBvwz9aXzQQ") Ronnie Burrage, <i>Spirit Guides</i>, 2011
-        p
-          img.bullet(src="images/bullet-2.png")
-          a(href="https://open.spotify.com/album/7bizfhujJTTI17xcSuI0l1?si=wJwmBc5LRZSYmMLJE8C04w") Greg Johnson, <i>From Here On Out</i>, 2021
-        //- p
-        //-   img.bullet(src="images/bullet-2.png")
-        //-   a(href="https://open.spotify.com/album/4qo0tCfDaR2W37ztOCkjK2?si=Ny6-R2tXRr6iFZqrkoayXg") Max Ribner Band, <i>Here in Spirit</i>, 2012
-        //- p
-        //-   img.bullet(src="images/bullet-2.png")
-        //-   a(href="https://open.spotify.com/album/7oOE6QtgakgyvIAMBaCfOW?si=j3Ny2JF8QuurqTYHWUM8Mw") Max Ribner Band, <i>Leap to Flame</i>, 2014
-      .sep.sep2
-
-      section#selfie: div.container(style="text-align: center")
-        //- div
-        //-   img(src="images/headshot.jpg", style="max-width: 460px")
-        //- div
-        //-   img(src="images/sup.png")
+          ul
+            //- li
+            //-   a(href='mailto:michael.douglas.dougherty@gmail.com') email
+            li
+              a(href='http://github.com/maackle') github
+            li
+              a(href='https://www.linkedin.com/in/michael1111/') linkedin
+            li
+              a(href='/resume.pdf') resume
